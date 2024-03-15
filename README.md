@@ -1,3 +1,7 @@
+Pokémons have been released into our world! Naturally, NFT merchants quickly seized the opportunity and set about creating the most obvious way to trade, a web application. Hence, a server-side application written in PHP, in which users can trade Pokémon cards is invented.
+
+
+
 <Jaodun Muntasir>
 <Neptun code>
 Web programming - assignment
