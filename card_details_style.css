@@ -1,0 +1,127 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+}
+
+.card-details-container {
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow: hidden;
+}
+
+.card-image img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #eee;
+}
+
+.card-info {
+    padding: 20px;
+}
+
+.card-info h1 {
+    color: #4CAF50;
+    margin: 0;
+}
+
+.card-info p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+@media (max-width: 767px) {
+    .card-details-container {
+        margin: 15px;
+    }
+
+    .card-info h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Menu Button Styles */
+.menu-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+}
+
+/* Navigation Menu Styles */
+.navigation-menu {
+    background-color: #fff;
+    box-shadow: 0 2px 5px #28a745;
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    width: 200px;
+    border-radius: 4px;
+    padding: 10px 0;
+    z-index: 99;
+}
+
+.navigation-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation-menu ul li a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.navigation-menu ul li a:hover {
+    background-color: #f4f4f4;
+}
+
+/* Initially hide the navigation menu */
+.hidden {
+    display: none;
+}
+
+.card-fire {
+    background-color: red;
+}
+
+.card-water {
+    background-color: blue;
+}
+
+.card-electric {
+    background-color: yellow;
+}
+
+.card-grass {
+    background-color: green;
+}
+
+.card-bug {
+    background-color: burlywood;
+}
+
+.card-normal {
+    background-color: beige;
+}
+
+.card-poison {
+    background-color: violet;
+}

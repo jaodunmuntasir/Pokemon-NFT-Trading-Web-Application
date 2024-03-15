@@ -1,0 +1,411 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header .title-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 10px 0;
+    margin-bottom: 30px; /* space between header and content */
+}
+
+header .login-container {
+    text-align: right;
+    padding: 10px;
+    background-color: #fff;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+header a.login-button {
+    padding: 5px 15px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+header a.login-button:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        position: static;
+        margin-top: 20px;
+    }
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-right: 70px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fafafa;
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card h2 {
+    font-size: 1.1rem;
+    margin: 0.5rem;
+}
+
+.card p {
+    font-size: 0.9rem;
+    margin: 0.5rem;
+}
+
+.card a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card a:hover {
+    background-color: #0056b3;
+}
+
+.buy-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.buy-button img {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px; /* Spacing between the icon and the price text */
+}
+
+.buy-button:hover {
+    background-color: #218838;
+}
+
+.tag-icon {
+    background-image: url('https://uxwing.com/wp-content/themes/uxwing/download/e-commerce-currency-shopping/tag-label-red-icon.png');
+}
+
+.heart-icon {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/768px-Heart_coraz%C3%B3n.svg.png');
+}
+
+.swords-icon {
+    background-image: url('https://cdn3.iconfinder.com/data/icons/glypho-travel/64/history-swords-crossed-512.png');
+}
+
+.shield-icon {
+    background-image: url('https://cdn4.iconfinder.com/data/icons/flat-design-security-set-one/24/security-512.png');
+}
+
+.tag-icon,
+.heart-icon,
+.swords-icon,
+.shield-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: cover;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.card-info {
+    padding: 10px;
+}
+
+.type {
+    font-weight: bold;
+    color: #666;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.stats span {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+/* Ensure the last item does not have a margin to the right */
+.stats span:last-child {
+    margin-right: 0;
+}
+
+.actions {
+    margin-top: 10px;
+}
+
+.details-button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.details-button:hover {
+    background-color: #0056b3;
+}
+
+/* Menu Button Styles */
+.menu-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+}
+
+/* Navigation Menu Styles */
+.navigation-menu {
+    background-color: #fff;
+    box-shadow: 0 2px 5px #28a745;
+    position: absolute;
+    top: 40px; /* Adjusted to not overlap the menu button */
+    left: 10px;
+    width: 200px;
+    border-radius: 4px;
+    padding: 10px 0;
+    z-index: 99;
+}
+
+.navigation-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation-menu ul li a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.navigation-menu ul li a:hover {
+    background-color: #f4f4f4;
+}
+
+/* Initially hide the navigation menu */
+.hidden {
+    display: none;
+}
+
+.fire {
+    background-color: red;
+}
+
+.water {
+    background-color: blue;
+}
+
+.electric {
+    background-color: yellow;
+}
+
+.grass {
+    background-color: green;
+}
+
+.bug {
+    background-color: burlywood;
+}
+
+.normal {
+    background-color: beige;
+}
+
+.poison {
+    background-color: violet;
+}
+
+.sidebar {
+    float: left;
+    width: 200px;
+    padding: 10px;
+    background-color: #f4f4f4; /* Light grey background */
+    /* border-right: 1px solid #ddd; Right border for the sidebar */
+    height: auto; /* Full height */
+    overflow-y: auto; /* Scrollable if content overflows */
+    box-sizing: border-box;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    color: #333; /* Dark text color for better readability */
+}
+
+.sidebar div {
+    margin-bottom: 10px; /* Spacing between checkboxes */
+}
+
+.sidebar label {
+    margin-left: 5px; /* Space between checkbox and label */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 150px; /* Smaller sidebar on mobile */
+    }
+}
+
+/* Button Style */
+.random-card-button-container button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 15px 32px; /* Padding inside the button */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline on the text */
+    display: inline-block; /* Inline-block element */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px; /* Margin around the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background color transition on hover */
+}
+
+.random-card-button-container button:hover {
+    background-color: #45a049; /* Darker green background on hover */
+}
+
+/* Popup Style */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black background with opacity */
+}
+
+.popup-content {
+    background-color: #fefefe; /* White background */
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px; /* Padding inside the content box */
+    border: 1px solid #888; /* Border */
+    width: 50%; /* Width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Close Button inside the Popup */
+.popup .close {
+    color: #aaa; /* Grey color */
+    float: right; /* Positioned to the right */
+    font-size: 28px; /* Font size */
+    font-weight: bold; /* Bold font */
+}
+
+.popup .close:hover,
+.popup .close:focus {
+    color: black; /* Black color on hover/focus */
+    text-decoration: none; /* No underline */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.popup h2 {
+    margin-top: 0; /* No top margin */
+    color: #333; /* Dark grey color */
+}
+
+/* Confirm Purchase Button inside the Popup */
+#confirm-purchase {
+    background-color: #008CBA; /* Blue background */
+    color: white; /* White text */
+    padding: 12px 24px; /* Padding */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Background color transition */
+}
+
+#confirm-purchase:hover {
+    background-color: #007B9E; /* Darker blue on hover */
+}
+
+.pagination {
+    text-align: right; /* Align pagination to the right */
+    margin-top: 350px; /* Spacing above pagination */
+    margin-bottom: 20px; /* Spacing below pagination */
+}
+
+.pagination a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    margin: 0 5px; /* Spacing between links */
+    padding: 5px 10px; /* Padding around links */
+    border: 1px solid #ddd; /* Border for each link */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.pagination a:hover {
+    background-color: #007bff; /* Background color on hover */
+    color: white; /* Text color on hover */
+}
+
+.pagination a.active {
+    background-color: #007bff; /* Background color for active link */
+    color: white; /* Text color for active link */
+}

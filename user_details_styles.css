@@ -1,0 +1,244 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.user-info {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.cards-section h2 {
+    color: #333;
+    padding: 5px 0;
+}
+
+.cards-container {
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fafafa;
+    transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* To push actions to the bottom */
+}
+
+.card:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+
+.card-info {
+    padding: 10px;
+    flex-grow: 1; /* Ensure it fills the space */
+}
+
+.card-info h2 {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+.card-info .type {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #666;
+    display: flex;
+    align-items: center;
+}
+
+.card-info .stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.card-info .stats span {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.stats span:last-child {
+    margin-right: 0;
+}
+
+.card-info .actions {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.card-info .actions form {
+    display: inline; /* Keep the form inline with the button */
+}
+
+/* Icon styles */
+.tag-icon,
+.heart-icon,
+.swords-icon,
+.shield-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: cover;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.tag-icon { background-image: url('https://uxwing.com/wp-content/themes/uxwing/download/e-commerce-currency-shopping/tag-label-red-icon.png'); }
+.heart-icon { background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/768px-Heart_coraz%C3%B3n.svg.png'); }
+.swords-icon { background-image: url('https://cdn3.iconfinder.com/data/icons/glypho-travel/64/history-swords-crossed-512.png'); }
+.shield-icon { background-image: url('https://cdn4.iconfinder.com/data/icons/flat-design-security-set-one/24/security-512.png'); }
+
+/* Media query for responsive layout */
+@media (max-width: 768px) {
+    .login-container {
+        position: static;
+        margin-top: 20px;
+    }
+}
+
+.details-button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+.details-button:hover {
+    background-color: #0056b3;
+}
+
+.card input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Menu Button Styles */
+.menu-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+}
+
+/* Navigation Menu Styles */
+.navigation-menu {
+    background-color: #fff;
+    box-shadow: 0 2px 5px #28a745;
+    position: absolute;
+    top: 40px; /* Adjusted to not overlap the menu button */
+    left: 10px;
+    width: 200px;
+    border-radius: 4px;
+    padding: 10px 0;
+    z-index: 99;
+}
+
+.navigation-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation-menu ul li a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.navigation-menu ul li a:hover {
+    background-color: #f4f4f4;
+}
+
+/* Initially hide the navigation menu */
+.hidden {
+    display: none;
+}
+
+.card-fire {
+    background-color: red;
+}
+
+.card-water {
+    background-color: blue;
+}
+
+.card-electric {
+    background-color: yellow;
+}
+
+.card-grass {
+    background-color: green;
+}
+
+.card-bug {
+    background-color: burlywood;
+}
+
+.card-normal {
+    background-color: beige;
+}
+
+.card-poison {
+    background-color: violet;
+}

@@ -1,0 +1,381 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.admin-header {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    text-align: center;
+    z-index: 100; /* Higher than the menu-button and navigation-menu */
+    position: relative;
+}
+
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.admin-sidebar {
+    width: 200px;
+    background-color: #2c3e50;
+    padding: 20px 0;
+}
+
+.sidebar-btn {
+    color: #fff;
+    padding: 10px 20px;
+    text-align: left;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-bottom: 1px solid #34495e;
+    transition: background-color 0.3s;
+}
+
+.sidebar-btn:hover {
+    background-color: #34495e;
+}
+
+/* Content Styles */
+.admin-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.settings-section,
+.cards-section {
+    display: none;
+}
+
+/* Forms and Buttons */
+form {
+    background-color: #ecf0f1;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #16a085;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #149174;
+}
+
+/* Card List Styles */
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px; /* Space between cards */
+    padding: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fafafa;
+    transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card h2 {
+    font-size: 1.1rem;
+    margin: 0.5rem;
+}
+
+.card p {
+    font-size: 0.9rem;
+    margin: 0.5rem;
+}
+
+.card a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card a:hover {
+    background-color: #0056b3;
+}
+
+.tag-icon {
+    background-image: url('https://uxwing.com/wp-content/themes/uxwing/download/e-commerce-currency-shopping/tag-label-red-icon.png');
+}
+
+.heart-icon {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/768px-Heart_coraz%C3%B3n.svg.png');
+}
+
+.swords-icon {
+    background-image: url('https://cdn3.iconfinder.com/data/icons/glypho-travel/64/history-swords-crossed-512.png');
+}
+
+.shield-icon {
+    background-image: url('https://cdn4.iconfinder.com/data/icons/flat-design-security-set-one/24/security-512.png');
+}
+
+.tag-icon,
+.heart-icon,
+.swords-icon,
+.shield-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: cover;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.card-info {
+    padding: 10px;
+}
+
+.type {
+    font-weight: bold;
+    color: #666;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.stats span {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.stats span:last-child {
+    margin-right: 0;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.add-card {
+    border: 2px dashed #bdc3c7;
+    border-radius: 4px;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.add-card:hover {
+    background-color: #bdc3c7;
+}
+
+.add-card button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 18px;
+    line-height: 1;
+    border: none;
+}
+
+.add-card p {
+    margin-top: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .admin-container {
+        flex-direction: column;
+    }
+
+    .admin-sidebar {
+        width: 100%;
+        padding: 0;
+    }
+
+    .sidebar-btn {
+        padding: 10px;
+        border: none;
+    }
+
+    .admin-content {
+        padding: 20px 10px;
+    }
+
+    .card-list {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); /* For smaller screens */
+    }
+}
+
+/* Menu Button Styles */
+.menu-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 102;
+    display: inline-block;
+    width: 100px;
+}
+
+/* Navigation Menu Styles */
+.navigation-menu {
+    background-color: #fff;
+    box-shadow: 0 2px 5px #28a745;
+    position: absolute;
+    top: 40px; /* Adjusted to not overlap the menu button */
+    left: 10px;
+    width: 200px; /* Adjust width as needed */
+    border-radius: 4px;
+    padding: 10px 0;
+    z-index: 101;
+}
+
+.navigation-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation-menu ul li a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.navigation-menu ul li a:hover {
+    background-color: #f4f4f4;
+}
+
+/* Initially hide the navigation menu */
+.hidden {
+    display: none;
+}
+
+#set-limit-form {
+    max-width: 300px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#set-limit-form input[type=number] {
+    width: calc(100% - 24px); /* Full-width minus padding and border */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px; /* Space below the input */
+    box-sizing: border-box; /* Includes padding and border in the element's width */
+    transition: border-color 0.3s;
+}
+
+#set-limit-form input[type=number]:focus {
+    outline: none;
+    border-color: #007bff; /* Highlight color when focused */
+}
+
+#set-limit-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#set-limit-form button:hover {
+    background-color: #0056b3; /* Slightly darker on hover */
+}
+
+.card-fire {
+    background-color: red;
+}
+
+.card-water {
+    background-color: blue;
+}
+
+.card-electric {
+    background-color: yellow;
+}
+
+.card-grass {
+    background-color: green;
+}
+
+.card-bug {
+    background-color: burlywood;
+}
+
+.card-normal {
+    background-color: beige;
+}
+
+.card-poison {
+    background-color: violet;
+}
