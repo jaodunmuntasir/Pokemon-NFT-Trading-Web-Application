@@ -1,4 +1,4 @@
-<Student's name>
+<Jaodun Muntasir>
 <Neptun code>
 Web programming - assignment
 This solution was submitted and created by the student above for the Web Programming course.
